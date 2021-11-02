@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#placeholder-logo {
+    font-variant-caps: small-caps;
+}
+
+.nav-item {
+    float: left;
+    list-style: none;
+    padding: 5px;
+}
