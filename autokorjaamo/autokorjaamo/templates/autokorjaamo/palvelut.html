@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+
+
+    <body>
+        <h1>Palvelut</h1>
+        <div>
+            <p> Tarjoamamme palvelut </p>
+        </div>
+        <ul>
+        {% for palvelu in palvelut %}
+            <li>{{palvelu}} {{palvelu.hinta}}</li>
+            
+            
+        {% endfor %}
+        </ul>
+
+        
+    </body>
+
+
+</html> 
