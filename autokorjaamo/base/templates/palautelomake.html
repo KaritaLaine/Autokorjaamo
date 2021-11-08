@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    
+{% extends "base.html" %}
+{% block body %}
+    
+    <body>
+        <center>
+        <h1>Palautelomake</h1>
+        <br/><br/>
+        {% if submitted %}
+            Kiitos palautteesta!
+        {% else %}
+
+        <form action="" method=POST>
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" value="Lähetä" class="btn btn-secondary">
+
+        </form>
+        {% endif %}
+        </center>
+    </body>
+    
+{% endblock %}
+</html>

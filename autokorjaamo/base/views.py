@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .forms import PalauteLomake
+from django.http import HttpResponseRedirect
 
 def etusivu(request):
     return render(request, 'etusivu.html')
@@ -12,3 +14,15 @@ def yhteystiedot(request):
 def palaute(request):
     return render(request, 'palaute.html')
 
+def asiakaspalaute(request):
+    submitted = False
+    if request.method == 'POST':
+        form = PalauteLomake(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/palautelomake?submitted=True')
+    else:
+        form = PalauteLomake
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'palautelomake.html', {'form':form, 'submitted':submitted})

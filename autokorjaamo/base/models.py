@@ -1,4 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Palaute(models.Model):
+    nimi = models.CharField(max_length=50)
+    palaute = models.TextField(max_length=1000)
+
+
 
