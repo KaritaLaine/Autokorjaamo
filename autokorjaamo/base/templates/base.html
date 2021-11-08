@@ -11,7 +11,7 @@
 
 <header>
     <title>Lahonen</title>
-    <a href="{% url 'etusivu' %}"> <img class="logo" src="{% static 'lahonen.png' %}" alt="Lahonen"> </a>
+        <a href="{% url 'etusivu' %}"> <img class="logo" src="{% static 'lahonen.png' %}" alt="Lahonen"> </a>
     <nav>   
         <ul class="nav-links">
             <li><a href="{% url 'etusivu' %}">Etusivu</a></li>
@@ -23,9 +23,27 @@
     </nav> 
 </header>
 
+<div class="wrapper">
 {% block body %}{% endblock %}
+</div>
 
 <footer>
-    <h3>footer</h3>
+    <div class="aukioloajat">
+        <h3>Aukioloajat</h3>
+        <ul class="ao-lista">
+            <li>Ma-pe: 8-19</li>
+            <Li>La: 10-17</Li>
+            <li>Su: 10-15</li>
+        </ul>
+    </div>
+
+    <div class="yhteystiedot">
+        <h3>Yhteystiedot</h3>
+        <ul class="yt-lista">
+            <li>Puh: 0453490412</li>
+            <Li>S-posti: asiakaspalvelu@lahonen.com</Li>
+            <li>Osoite: Lahosentie 5, 86100 Lahonen</li>
+        </ul>
+    </div>     
 </footer>
 </html>
