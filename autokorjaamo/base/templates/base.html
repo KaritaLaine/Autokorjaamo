@@ -11,13 +11,16 @@
 
 <header>
     <title>Lahonen</title>
-    <p id='placeholder-logo'>Placeholder logo</p>
-        <ul id="navigaatio" class="navigaatio">
-            <li class='nav-item'><a href="{% url 'etusivu' %}">Etusivu</a></li>
-            <li class='nav-item'><a href="{% url 'palvelut' %}">Palvelut</a></li>
-            <li class='nav-item'><a href="{% url 'yhteystiedot' %}">Yhteystiedot</a></li>
-            <li class='nav-item'><a href="{% url 'palaute' %}">Palaute</a></li>
+    <a href="{% url 'etusivu' %}"> <img class="logo" src="{% static 'lahonen.png' %}" alt="Lahonen"> </a>
+    <nav>   
+        <ul class="nav-links">
+            <li><a href="{% url 'etusivu' %}">Etusivu</a></li>
+            <li><a href="{% url 'palvelut' %}">Palvelut</a></li>
+            <li><a href="{% url 'yhteystiedot' %}">Yhteystiedot</a></li>
+            <li><a href="{% url 'palaute' %}">Palaute</a></li>
+            <li><a href="{% url 'palautelomake' %}">Palautelomake</a></li>
         </ul>
+    </nav> 
 </header>
 
 {% block body %}{% endblock %}
