@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from .forms import PalauteLomake
 from django.http import HttpResponseRedirect
+from .models import Palvelu
 
 def etusivu(request):
     return render(request, 'etusivu.html')
 
 def palvelut(request):
-    return render(request, 'palvelut.html')
+    palvelut = Palvelu.objects.all()
+    context = {'palvelut' : palvelut}
+    return render(request, 'palvelut.html', context)
 
 def yhteystiedot(request):
     return render(request, 'yhteystiedot.html')
