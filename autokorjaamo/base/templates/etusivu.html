@@ -4,11 +4,65 @@
 <!-- extends toistaa base.html:ssä sijaitsevan headerin ja footerin sivulle-->
 {% extends "base.html" %}
 {% block body %}
+{% load static %}
 
-    <body>
-        <h1>Etusivu</h1>
-        <p> Tästä pitäs jatkaa.. </p>
-    </body>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'et_kuva1.jpg' %}" alt="Lahonen">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'et_kuva2.jpg'%}" alt="Lahonen">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'et_kuva3.jpg'%}" alt="Lahonen">
+        </div>
 
+        <a class="prev" onclick="lisays(-1)">&#10094;</a>
+        <a class="next" onclick="lisays(+1)">&#10095;</a>
+    </div>
+
+    <div class="info">
+        <div class="infoteksti">
+            <h1>Lahonen</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Phasellus feugiat lacinia iaculis. Nunc et sollicitudin ipsum. 
+                Donec feugiat tempus euismod. Nulla facilisi. Vestibulum interdum 
+                nulla in quam molestie, ut convallis augue accumsan. Quisque elit 
+                nisi, sollicitudin sed laoreet non, sodales eget lectus. Aliquam nec
+                 odio eget nunc pharetra semper ut et ipsum. Nulla facilisi.
+            </p>
+        </div>
+        <img class="logo-et" src="{% static 'auto.png' %}" alt="Lahonen">
+    </div>
+
+    <!-- Dokumentointi tästä löytyy githubista,
+jos joku on kiinnostunut, että miten tää toimii -->
+    <script type="text/javascript">
+        var kuvaIndeksi = 1;
+        naytaNakymat(kuvaIndeksi);
+
+        function lisays(n) {
+            naytaNakymat(kuvaIndeksi = kuvaIndeksi + n);
+        }
+
+        function naytaNakymat(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                kuvaIndeksi = 1
+            } if (n < 1) {
+                kuvaIndeksi = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[kuvaIndeksi - 1].style.display = "block";
+        }
+    </script>
+
+
+</body>
 {% endblock %}
+
 </html>
