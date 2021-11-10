@@ -29,7 +29,7 @@
   }
   
   .logo:hover {
-    filter: invert(10%);
+    filter: grayscale(120%) brightness(40%) sepia(100%) hue-rotate(-35deg) saturate(550%) contrast(0.8);
   }
   
   .nav-links a{
