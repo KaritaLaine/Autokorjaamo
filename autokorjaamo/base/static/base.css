@@ -147,3 +147,15 @@ footer li {
 .palaute {
   padding-bottom: 20px;
 }
+
+/* PALVELUT-SIVU */
+
+ .palvelut {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding: 10px;
+    margin: 10;
+    display:table;
+    background-color: rgba(206, 206, 206, 0.884);
+} 

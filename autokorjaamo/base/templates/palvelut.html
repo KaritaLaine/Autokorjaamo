@@ -5,10 +5,18 @@
 {% block body %}
 
     <body>
-        <h1>Palvelut</h1>
-        <div>
-            <p> Tarjoamamme palvelut </p>
-        </div>
+        <style>
+            body {
+               background-image: url("../static/workshop2.jpg"); 
+              background-repeat: no-repeat;
+            }
+            </style>
+        
+        
+        <div class="palvelut">
+            <h1>Palvelut</h1>
+            <h2> Tarjoamamme palvelut </h2>
+        
         <ul>
         {% for palvelu in palvelut %}
             <li>{{palvelu}} {{palvelu.hinta}}</li>
@@ -16,6 +24,7 @@
             
         {% endfor %}
         </ul>
+        </div>
     </body>
     
 {% endblock %}
