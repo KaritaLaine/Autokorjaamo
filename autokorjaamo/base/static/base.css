@@ -172,9 +172,6 @@ footer li {
 .palaute_otsikko {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  background-color: #ccc;
-  border-radius: 4px;
-  width: 83%;
 }
 
 .palaute_nimi {
