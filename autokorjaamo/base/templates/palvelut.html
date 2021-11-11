@@ -3,6 +3,7 @@
     
 {% extends "base.html" %}
 {% block body %}
+{% load static %}
 
     <body>
         <!-- <style>
@@ -11,33 +12,43 @@
               background-repeat: no-repeat;
             }
             </style> -->
+   <!--  <center>
+    <div class="palvelu_heading">
+        <h1>Palvelut</h1>
+    </div>
+    </center> -->
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="{% static 'et_kuva1.jpg' %}" alt="Lahonen">
+            <img src="{% static 'palvelu_kuva3.jpg' %}" alt="Lahonen">
         </div>
         <div class="mySlides fade">
-            <img src="{% static 'et_kuva2.jpg'%}" alt="Lahonen">
+            <img src="{% static 'palvelu_kuva2.jpg'%}" alt="Lahonen">
         </div>
         <div class="mySlides fade">
-            <img src="{% static 'et_kuva3.jpg'%}" alt="Lahonen">
+            <img src="{% static 'palvelu_kuva1.jpg'%}" alt="Lahonen">
         </div>
 
         <a class="prev" onclick="lisays(-1)">&#10094;</a>
         <a class="next" onclick="lisays(+1)">&#10095;</a>
     </div>
         
-        
+        <center>
         <div class="palvelut">
-            <h1>Palvelut</h1>
+            
             <h2> Tarjoamamme palvelut </h2>
-        <ul>
+            <br>
+            
+        <ul style="list-style: none;">
         {% for palvelu in palvelut %}
             <li>{{palvelu}} {{palvelu.hinta}}</li>
             
             
         {% endfor %}
         </ul>
+        <br>
+        <p>Eikö tarvitsemaasi palvelua löydy? Ota meihin yhteyttä!</p>
         </div>
+        </center>
 
         <script type="text/javascript">
             var kuvaIndeksi = 1;

@@ -250,12 +250,16 @@ footer li {
 
 /* PALVELUT-SIVU */
 
+
+
 .palvelut {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
   padding-left: 20px;
-  padding: 10px;
-  margin: 10;
+  padding: 20px;
+  margin: 20;
   display:table;
-  background-color: rgba(206, 206, 206, 0.884);
+  list-style:none;
+  line-height: 2;
+ 
 } 
