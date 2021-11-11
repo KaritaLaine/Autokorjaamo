@@ -186,6 +186,18 @@ footer li {
   color: white;
 }
 
+.palaute_sposti {
+  width: 28%;
+  height: 45px;
+  padding: 12px 5px;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  background-color: #24252a;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
 .palaute_textarea {
   width: 30%;
   height: 300px;
