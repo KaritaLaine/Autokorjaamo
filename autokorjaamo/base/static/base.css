@@ -263,3 +263,67 @@ footer li {
   line-height: 2;
  
 } 
+
+/* PALAUTELOMAKE-SIVU */
+
+.palaute_painike {
+  background-color: #E9724C;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.palaute_painike:hover {
+  transition: 0.3s;
+  background-color: #3e8e41;
+  color: white;
+}
+
+.palaute_otsikko {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.palaute_nimi {
+  width: 15%;
+  height: 45px;
+  padding: 12px 5px;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  background-color: #24252a;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.palaute_sposti {
+  width: 28%;
+  height: 45px;
+  padding: 12px 5px;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  background-color: #24252a;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.palaute_textarea {
+  width: 30%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  background-color: #24252a;
+  resize: none;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}

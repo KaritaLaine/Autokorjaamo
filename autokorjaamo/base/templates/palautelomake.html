@@ -5,18 +5,25 @@
 {% block body %}
     
     <body>
+        <br/>
         <center>
-        <h1>Palautelomake</h1>
-        <br/><br/>
+        <div class="palaute_otsikko">
+            <h1>Palautelomake</h1>
+        </div>
+        <br/><br/><br/><br/>
         {% if submitted %}
             Kiitos palautteesta!
         {% else %}
 
         <form action="" method=POST>
             {% csrf_token %}
-            {{ form.as_p }}
-
-            <input type="submit" value="Lähetä" class="btn btn-secondary">
+            {{ form.nimi }}
+            <br/><br/>
+            {{ form.sposti }}
+            <br/><br/>
+            {{ form.palaute }}
+            <br/><br/>
+            <input type="submit" value="Lähetä" class="palaute_painike">
 
         </form>
         {% endif %}
