@@ -45,7 +45,15 @@
     font-size: 18px;
     transition: 0.5s;
   }
+
+  .mobile-nav-links {
+    display: none;
+  }
   
+  .menuburger {
+    display: none;
+  }
+
   .nav-links li {
     padding: 0px 20px;
   }
@@ -158,6 +166,7 @@ footer li {
 
 .slideshow-container {
   max-width: 1200px;
+  width: 100%;
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -297,4 +306,67 @@ footer li {
   font-size: large;
   font-family: "Montserrat", sans-serif;
   color: white;
+}
+
+
+/* MOBIILIOPTIMOINTI */
+@media only screen and (max-width: 900px){
+
+.nav-links {
+  display: none;
+}
+
+.mobile-nav-links {
+  position: absolute;
+  right: 0;
+  top: 115px;
+  list-style: none;
+  background-color: #24252a;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  z-index: 99;
+}
+
+.mobile-nav-links a:hover {
+  color: #E9724C;
+}
+
+.mobile-nav-links #menu {
+  display: none;
+}
+
+.mobile-nav-links a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-nav-links li{
+  padding: 20px 10px;
+  border:  1.4px solid #2d3038;
+  border-left: 0;
+  border-right: 0;
+}
+
+.menuburger {
+  display: block;
+}
+
+.menuburger p{
+  color:white;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.menuburger p:hover{
+  color: #E9724C;
+}
+
+.wrapper {
+  width: 95%;
+}
 }

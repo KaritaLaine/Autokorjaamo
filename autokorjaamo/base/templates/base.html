@@ -8,6 +8,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'base.css'%}"> 
     <link rel="shortcut icon" href="{% static 'auto.png' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>    
 
 <header>
@@ -20,8 +21,31 @@
             <li><a href="{% url 'yhteystiedot' %}">Yhteystiedot</a></li>
             <li><a href="{% url 'palautelomake' %}">Palaute</a></li>
         </ul>
-    </nav> 
+
+        <div class="menuburger"> 
+            <p onclick="menu()">&#9776;</p>
+        </div>
+        <ul id="menu" class="mobile-nav-links">
+            <li><a href="{% url 'etusivu' %}">Etusivu</a></li>
+            <li><a href="{% url 'palvelut' %}">Palvelut</a></li>
+            <li><a href="{% url 'yhteystiedot' %}">Yhteystiedot</a></li>
+            <li><a href="{% url 'palautelomake' %}">Palaute</a></li>
+        </ul>
+    </nav>
 </header>
+
+<script type="text/javascript">
+
+function menu(){
+var menu = document.getElementById("menu")
+if (menu.style.display === "block"){
+    menu.style.display = "none";
+} else {
+    menu.style.display = "block";
+}
+}   
+
+</script>
 
 <div class="wrapper">
 {% block body %}{% endblock %}
