@@ -4,6 +4,6 @@ from .models import *
 admin.site.register(Palaute)
 
 class PalveluAdmin(admin.ModelAdmin):
-    fields = ["palvelu", "hinta", "sposti"]
+    fields = ["palvelu", "hinta"]
 
 admin.site.register(Palvelu,PalveluAdmin)
