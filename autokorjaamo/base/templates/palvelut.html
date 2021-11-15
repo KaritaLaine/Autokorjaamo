@@ -41,25 +41,24 @@
         </center>
 
         <script type="text/javascript">
-            var kuvaIndeksi = 1;
+            var kuvaIndeksi = 0;
             naytaNakymat(kuvaIndeksi);
-    
-            function lisays(n) {
-                naytaNakymat(kuvaIndeksi = kuvaIndeksi + n);
-            }
     
             function naytaNakymat(n) {
                 var i;
                 var slides = document.getElementsByClassName("mySlides");
-                if (n > slides.length) {
-                    kuvaIndeksi = 1
-                } if (n < 1) {
-                    kuvaIndeksi = slides.length
-                }
+                
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
                 }
+    
+                kuvaIndeksi++;
+                if (kuvaIndeksi > slides.length) {
+                    kuvaIndeksi = 1;
+                }
                 slides[kuvaIndeksi - 1].style.display = "block";
+                setTimeout(naytaNakymat, 6000);
+                    slides[kuvaIndeksi - 1].style.display = "block";
             }
         </script>
     </body>
