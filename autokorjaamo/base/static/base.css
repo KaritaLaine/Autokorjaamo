@@ -117,12 +117,15 @@ footer li {
 .gmap_canvas {
     overflow:hidden;
     background:none !important;
-    height:500px;
-    width:500px;
+    height: 100%;
+    width: 100%;
   }
 
+
 #gmap_canvas {
-  border: 1.4px solid #E9724C
+  border: 1.4px solid #E9724C;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -130,7 +133,8 @@ footer li {
   position:relative;
   text-align:right;
   height:500px;
-  width:500px;
+  max-width:500px;
+  width: 100%;
 }
 
 .yt-wrapper {
@@ -246,32 +250,45 @@ footer li {
 
 /* PALAUTELOMAKE-SIVU */
 
+.keskita {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
 .palaute_painike {
   background-color: #E9724C;
   border: none;
   border-radius: 4px;
   color: white;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .palaute_painike:hover {
   transition: 0.3s;
-  background-color: #3e8e41;
+  background-color: #b85232;
   color: white;
 }
 
-.palaute_otsikko {
+#palauteotsikko {
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 30px;
+  margin-top: 25px;
+  margin-bottom: 7px;
 }
 
 .palaute_nimi {
-  width: 15%;
+  width: 100%;
   height: 45px;
   padding: 12px 5px;
   border: 5px solid #ccc;
@@ -283,7 +300,7 @@ footer li {
 }
 
 .palaute_sposti {
-  width: 28%;
+  width: 100%;
   height: 45px;
   padding: 12px 5px;
   border: 5px solid #ccc;
@@ -295,7 +312,7 @@ footer li {
 }
 
 .palaute_textarea {
-  width: 30%;
+  width: 100%;
   height: 300px;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -369,4 +386,10 @@ footer li {
 .wrapper {
   width: 95%;
 }
+
+.mapouter {
+  height: 300px;
+}
+
+
 }
