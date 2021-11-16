@@ -5,11 +5,9 @@
 {% block body %}
     
     <body>
+        <div class="keskita">
+        <h1 id="palauteotsikko">Palautelomake</h1>
         <br/>
-        <center>
-        <div class="palaute_otsikko">
-            <h1>Palautelomake</h1>
-        </div>
         <br/><br/><br/><br/>
         {% if submitted %}
             Kiitos palautteesta!
@@ -27,7 +25,7 @@
 
         </form>
         {% endif %}
-        </center>
+        </div>
     </body>
     
 {% endblock %}
