@@ -234,18 +234,15 @@ footer li {
 
 /* PALVELUT-SIVU */
 
-
-
 .palvelut {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding: 20px;
-  margin: 20;
-  display:table;
   list-style:none;
   line-height: 2;
- 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: table;
+  flex-wrap: wrap;
+  margin:0 auto;
 } 
 
 /* PALAUTELOMAKE-SIVU */
