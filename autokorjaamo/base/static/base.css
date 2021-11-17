@@ -251,6 +251,11 @@ footer li {
   font-size: 33px;
 }
 
+.palvelut p {
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
 /* PALAUTELOMAKE-SIVU */
 
 .keskita {
