@@ -42,7 +42,7 @@
   .nav-links {
     list-style: none;
     display: flex;
-    font-size: 18px;
+    font-size: 18.3px;
     transition: 0.5s;
   }
 
@@ -78,6 +78,7 @@
     margin: auto;
     padding-top: 5px;
     font-family: "Montserrat", sans-serif;
+    font-size: 19.5px;
     min-height: 100vh;
 }
 
@@ -248,6 +249,11 @@ footer li {
  
 } 
 
+.palvelut h2 {
+  margin-top: 27px;
+  font-size: 33px;
+}
+
 /* PALAUTELOMAKE-SIVU */
 
 .keskita {
@@ -272,19 +278,20 @@ footer li {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px;
+  font-size: 19.5px;
 }
 
 .palaute_painike:hover {
-  transition: 0.3s;
+  transition: 0.5s;
   background-color: #b85232;
   color: white;
 }
 
 #palauteotsikko {
   font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  margin-top: 25px;
-  margin-bottom: 7px;
+  font-size: 34px;
+  margin-top: 30px;
+  margin-bottom: 8px;
 }
 
 .palaute_nimi {
