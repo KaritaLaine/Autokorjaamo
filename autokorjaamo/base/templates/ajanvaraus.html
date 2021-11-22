@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+{% extends "base.html" %}
+{% block body %}
+    
+    <body>
+        <div class="keskita">
+        <h1 id="palauteotsikko">Ajanvaraus</h1>
+        {% if submitted %}
+            <p>Kiitos ajanvarauksesta!</p>
+        {% else %}
+
+        <form action="" method=POST>
+        <h3> Henkilötiedot </h3>    
+            {% csrf_token %}
+            {{ form.nimi }}
+            {{ form.sposti }}
+            {{ form.puh }}
+            {{ form.osoite }}
+
+        <h3> Auton tiedot </h3>  
+            {{ form.rekisterinumero }}
+            {{ form.vuosimalli }}
+            {{ form.merkki }}
+            {{ form.malli }}
+            {{ form.kilometrit }}
+            {{ form.lisatiedot }}
+
+        <h3> Huollon tiedot </h3>  
+            {{ form.pvm }}
+            {{ form.klo }}
+
+<!-- Yritin vaan jotain, tohon alapuolelle pitäs tehä se dropdown lista -->
+            <select class="Huoltotyyppi">
+                {% for palvelu in palvelut %}
+                <option value="palvelut"> {{palvelu}} {{palvelu.hinta}}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" value="Lähetä" class="palaute_painike">
+        
+        </form>
+        
+        {% endif %}
+        </div>
+    </body>
+    
+{% endblock %}
+</html>

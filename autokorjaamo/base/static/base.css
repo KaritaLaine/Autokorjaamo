@@ -231,6 +231,7 @@ footer li {
   max-width: 160px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 /* PALVELUT-SIVU */
@@ -399,6 +400,4 @@ footer li {
 .mapouter {
   height: 300px;
 }
-
-
 }

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import PalauteLomake
+from .forms import PalauteLomake, ajanvaraus
 from django.http import HttpResponseRedirect
 from .models import Palvelu
 
@@ -29,3 +29,16 @@ def asiakaspalaute(request):
         if 'submitted' in request.GET:
             submitted = True
     return render(request, 'palautelomake.html', {'form':form, 'submitted':submitted})
+
+def ajanvarauslomake(request):
+    submitted = False
+    if request.method == 'POST': 
+        form = ajanvaraus(request.POST)
+        if form.is_valid(): 
+            form.save()
+            return HttpResponseRedirect('/ajanvaraus?submitted=True')
+    else: 
+        form = ajanvaraus
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'ajanvaraus.html', {'form':form, 'submitted':submitted})

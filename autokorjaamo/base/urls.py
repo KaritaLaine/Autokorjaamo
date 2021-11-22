@@ -6,5 +6,6 @@ urlpatterns = [
     path('palvelut/', views.palvelut, name='palvelut'),
     path('yhteystiedot/', views.yhteystiedot, name='yhteystiedot'),
     path('palaute/', views.palaute, name='palaute'),
-    path('palautelomake/', views.asiakaspalaute, name='palautelomake')
+    path('palautelomake/', views.asiakaspalaute, name='palautelomake'),
+    path('ajanvaraus/', views.ajanvarauslomake, name='ajanvaraus'),
 ]
