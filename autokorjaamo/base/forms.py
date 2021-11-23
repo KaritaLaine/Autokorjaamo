@@ -22,7 +22,7 @@ class PalauteLomake(forms.ModelForm):
 class ajanvaraus(forms.ModelForm):
     class Meta:
         model = ajanvaraus
-        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo')
+        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo',)
         labels = {
             'nimi': '',
             'sposti': '',

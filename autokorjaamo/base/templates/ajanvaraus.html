@@ -32,10 +32,13 @@
             {{ form.klo }}
 
 <!-- Yritin vaan jotain, tohon alapuolelle pitäs tehä se dropdown lista -->
-            <select class="Huoltotyyppi">
-                {% for palvelu in palvelut %}
-                <option value="palvelut"> {{palvelu}} {{palvelu.hinta}}</option>
+            <select>
+
+                <option>VALINNAT</option>
+                {% for palvelu in palvelut %}          
+                <option>{{palvelu.palvelu}}</option>
                 {% endfor %}
+
             </select>
 
             <input type="submit" value="Lähetä" class="palaute_painike">

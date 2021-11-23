@@ -33,6 +33,6 @@ class ajanvaraus(models.Model):
     klo = models.TimeField(max_length=10)
 
     def __str__(self):
-        return self.ajanvaraus
+        return self.nimi
 
 
