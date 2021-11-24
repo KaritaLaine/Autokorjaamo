@@ -6,23 +6,24 @@
     
     <body>
         <div class="keskita">
-        <h1 id="palauteotsikko">Palautelomake</h1>
-        <br/>
-        <br/><br/><br/><br/>
         {% if submitted %}
-            Kiitos palautteesta!
+            <h1 class="kiitos">Kiitos palautteesta!</h1>
         {% else %}
 
+        <h1 class="palauteotsikko">Palautelomake</h1>
         <form action="" method=POST>
             {% csrf_token %}
-            {{ form.nimi }}
-            <br/><br/>
+        <div class = "nimi-p"> 
+            <p> Nimi </p>
+            {{ form.nimi }} </div>
+        <div class = "sp-p"></div>
+            <p> Sähköposti </p>
             {{ form.sposti }}
-            <br/><br/>
-            {{ form.palaute }}
-            <br/><br/>
-            <input type="submit" value="Lähetä" class="palaute_painike">
-
+        <div class = "palaute-p">
+            <p> Palaute </p>
+            {{ form.palaute }} </div>
+            
+        <input type="submit" value="Lähetä" class="palaute_painike">
         </form>
         {% endif %}
         </div>

@@ -13,9 +13,9 @@ class PalauteLomake(forms.ModelForm):
             'palaute': ''
         }
         widgets = {
-            'nimi': forms.TextInput(attrs={'placeholder': 'Nimi...', 'class': 'palaute_nimi'}),
-            'palaute': forms.Textarea(attrs={'placeholder': 'Anna palautetta...', 'class': 'palaute_textarea'}),
-            'sposti': forms.EmailInput(attrs={'placeholder': 'Sähköposti...', 'class': 'palaute_sposti'})
+            'nimi': forms.TextInput(attrs={'class': 'av-nimi av-form-elem'}),
+            'palaute': forms.Textarea(attrs={'class': 'av-palaute av-form-elem'}),
+            'sposti': forms.EmailInput(attrs={'class': 'av-sposti av-form-elem'})
         }
 
 
@@ -39,16 +39,16 @@ class ajanvaraus(forms.ModelForm):
         }
 
         widgets = {
-            'nimi': forms.TextInput(attrs={'placeholder': 'Nimi...', 'class': 'av-nimi'}),
-            'sposti': forms.EmailInput(attrs={'placeholder': 'Sähköposti...', 'class': 'av-sposti', 'type':'email'}),
-            'puh': forms.TextInput(attrs={'placeholder': 'Puhelinnumero...', 'class': 'av-puh', 'type':'tel'}),
-            'osoite': forms.TextInput(attrs={'placeholder': 'Osoite...', 'class': 'av-osoite'}),
-            'rekisterinumero': forms.TextInput(attrs={'placeholder': 'Rekisterinumero...', 'class': 'av-rekisterinumero'}),
-            'vuosimalli': forms.NumberInput(attrs={'placeholder': 'Vuosimalli...', 'class': 'av-vuosimalli', 'type':'number', 'min':'1'}),
-            'merkki': forms.TextInput(attrs={'placeholder': 'Merkki...', 'class': 'av-merkki'}),
-            'malli': forms.TextInput(attrs={'placeholder': 'Malli...', 'class': 'av-malli'}),
-            'kilometrit': forms.NumberInput(attrs={'placeholder': 'Kilometrit...', 'class': 'av-kilometrit', 'type':'number', 'min':'1'}),
-            'lisatiedot': forms.Textarea(attrs={'placeholder': 'Lisätiedot...', 'class': 'av-lisatiedot'}),
-            'pvm': forms.DateInput(attrs={'placeholder': 'Päivämäärä...', 'class': 'av-pvm', 'type':'date'}),
-            'klo': forms.TimeInput(attrs={'placeholder': 'Kellonaika...', 'class': 'av-klo', 'type':'time'}),
+            'nimi': forms.TextInput(attrs={'class': 'av-nimi av-form-elem'}),
+            'sposti': forms.EmailInput(attrs={'class': 'av-sposti av-form-elem', 'type':'email'}),
+            'puh': forms.TextInput(attrs={'class': 'av-puh av-form-elem', 'type':'tel'}),
+            'osoite': forms.TextInput(attrs={'class': 'av-osoite av-form-elem'}),
+            'rekisterinumero': forms.TextInput(attrs={'class': 'av-rekisterinumero av-form-elem'}),
+            'vuosimalli': forms.NumberInput(attrs={'class': 'av-vuosimalli av-form-elem', 'type':'number', 'min':'1'}),
+            'merkki': forms.TextInput(attrs={'class': 'av-merkki av-form-elem'}),
+            'malli': forms.TextInput(attrs={'class': 'av-malli av-form-elem'}),
+            'kilometrit': forms.NumberInput(attrs={'class': 'av-kilometrit av-form-elem', 'type':'number', 'min':'1'}),
+            'lisatiedot': forms.Textarea(attrs={'class': 'av-form-elem av-lisatiedot'}),
+            'pvm': forms.DateInput(attrs={'class': 'av-pvm av-form-elem', 'type':'date'}),
+            'klo': forms.TimeInput(attrs={'class': 'av-klo av-form-elem', 'type':'time', "min":"10:00", "max":"17:00"}),
         }
