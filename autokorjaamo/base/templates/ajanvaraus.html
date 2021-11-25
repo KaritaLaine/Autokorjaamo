@@ -3,12 +3,13 @@
     
 {% extends "base.html" %}
 {% block body %}
-    
+
 <body>
     <div class="keskita2">
     {% if submitted %}
         <h1 class="kiitos">Kiitos ajanvarauksesta!</h1>
     {% else %}
+    
 
     <form action="" method=POST>
     <h1 id="av-otsikko">Ajanvaraus</h1>
@@ -73,8 +74,7 @@
     <input type="submit" value="Varaa aika" class="palaute_painike">
     </form>   
     {% endif %}
-    
+    </div>
 </body>
-    
-{% endblock %}
+{% endblock %}    
 </html>

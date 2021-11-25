@@ -14,7 +14,7 @@ class PalauteLomake(forms.ModelForm):
         }
         widgets = {
             'nimi': forms.TextInput(attrs={'class': 'av-nimi av-form-elem'}),
-            'palaute': forms.Textarea(attrs={'class': 'av-palaute av-form-elem'}),
+            'palaute': forms.Textarea(attrs={'class': 'av-lisatiedot av-form-elem'}),
             'sposti': forms.EmailInput(attrs={'class': 'av-sposti av-form-elem'})
         }
 

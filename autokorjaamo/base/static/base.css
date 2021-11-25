@@ -262,10 +262,13 @@ footer li {
 .keskita {
   display: flex;
   flex: 1;
-  overflow: auto;
   justify-content:center;
   align-items: center;
-  height: 82vh;
+  height: 88vh;
+}
+
+.keskita p {
+  margin-top: 12px;
 }
 
 .palauteotsikko {
@@ -273,20 +276,22 @@ footer li {
   font-size: 37px;
 }
 
-.palaute_painike {
-  background-color: #E9724C;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  padding: 15px 32px;
-  text-decoration: none;
-  font-size: 19.5px;
+.keskita .palaute_painike{
+  float: right;
+}
+
+.keskita .av-lisatiedot {
+  height: 200px;
 }
 
 .palaute_painike:hover {
   transition: 0.5s;
   background-color: #b85232;
   color: white;
+}
+
+.keskita form {
+  width: 600px;
 }
 
 #palauteotsikko {
@@ -356,6 +361,7 @@ footer li {
 
 .av-lisatiedot {
   height: 130px;
+  max-width: 100% !important;
 }
 
 .henk-wrapper {
@@ -404,16 +410,26 @@ footer li {
 .keskita2 form {
   display:flex;
   flex-wrap: wrap;
-  width: 820px;
+  max-width: 820px;
   justify-content: space-around;
   align-items: flex-start;
   margin:auto;
   gap: 10px;
 }
 
-.keskita2 .palaute_painike {
+.palaute_painike {
   margin-top: 20px;
   margin-bottom: 50px;
+  background-color: #E9724C;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 19.5px;
+}
+
+.keskita2 .palaute_painike {
   margin-left: auto;
 }
 
@@ -423,11 +439,11 @@ footer li {
   margin-top: 40px;
   margin-bottom: 5px;
   font-size: 37px;
-  width: 100%
+  width: 100%;
 }
 
 .rekisterinumero-p, .vuosimalli-p{
-  width: 195px !important;
+  max-width: 195px !important;
 }
 
 
@@ -498,5 +514,11 @@ footer li {
 
 .mapouter {
   height: 300px;
+}
+
+.keskita2 {
+  max-width: 400px;
+  align-items: center;
+  margin: auto;
 }
 }
