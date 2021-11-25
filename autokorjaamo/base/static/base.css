@@ -261,27 +261,27 @@ footer li {
 
 .keskita {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1;
   justify-content:center;
   align-items: center;
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
+  height: 88vh;
 }
 
-.palaute_painike {
-  background-color: #E9724C;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  padding: 15px 32px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
+.keskita p {
+  margin-top: 12px;
+}
+
+.palauteotsikko {
   margin-bottom: 20px;
-  font-size: 19.5px;
+  font-size: 37px;
+}
+
+.keskita .palaute_painike{
+  float: right;
+}
+
+.keskita .av-lisatiedot {
+  height: 200px;
 }
 
 .palaute_painike:hover {
@@ -290,11 +290,14 @@ footer li {
   color: white;
 }
 
+.keskita form {
+  width: 600px;
+}
+
 #palauteotsikko {
   font-family: "Montserrat", sans-serif;
   font-size: 34px;
-  margin-top: 30px;
-  margin-bottom: 8px;
+  width: 100%;
 }
 
 .palaute_nimi {
@@ -335,6 +338,118 @@ footer li {
   color: white;
 }
 
+/* AJANVARAUSSIVU */
+
+.kiitos {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  height: 80vh;
+  width: 100%;
+}
+
+.av-form-elem {
+  width: 100%;
+  height: 50px;
+  padding: 12px 5px;
+  border: 1px solid black;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.av-lisatiedot {
+  height: 130px;
+  max-width: 100% !important;
+}
+
+.henk-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  width: 400px;
+  gap: 10px;
+}
+
+.auto-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  width: 400px;
+  gap: 10px;
+}
+
+.huolto-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.huolto-wrapper .av-form-elem {
+  width: 100px;
+  flex-grow: 1;
+}
+
+.huolto-wrapper h3 {
+  align-self: center;
+  justify-self: center;
+  margin-top: 30px;
+}
+
+.keskita2 h3 {
+  width: 100%;
+  color: #E9724C;
+}
+
+.keskita2 p {
+  width:100%;
+  font-size: 18px;
+  padding: 1px 0;
+}
+
+.keskita2 form {
+  display:flex;
+  flex-wrap: wrap;
+  max-width: 820px;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin:auto;
+  gap: 10px;
+}
+
+.palaute_painike {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #E9724C;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 19.5px;
+}
+
+.keskita2 .palaute_painike {
+  margin-left: auto;
+}
+
+#av-otsikko {
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 37px;
+  width: 100%;
+}
+
+.rekisterinumero-p, .vuosimalli-p{
+  max-width: 195px !important;
+}
+
+
+.merkki-p, .malli-p, .kilometrit-p, .lt-p, .nimi-p, .sp-p, .puh-p, .osoite-p{
+  width: 100%;
+}
 
 /* MOBIILIOPTIMOINTI */
 @media only screen and (max-width: 900px){
@@ -399,5 +514,11 @@ footer li {
 
 .mapouter {
   height: 300px;
+}
+
+.keskita2 {
+  max-width: 400px;
+  align-items: center;
+  margin: auto;
 }
 }
