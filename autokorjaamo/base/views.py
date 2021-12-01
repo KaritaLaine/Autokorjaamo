@@ -31,7 +31,7 @@ def asiakaspalaute(request):
     return render(request, 'palautelomake.html', {'form':form, 'submitted':submitted})
 
 def ajanvarauslomake(request):
-    dropdown_palaute = Palvelu.objects.all()
+
     submitted = False
     if request.method == 'POST': 
         form = ajanvaraus(request.POST)
@@ -42,4 +42,4 @@ def ajanvarauslomake(request):
         form = ajanvaraus
         if 'submitted' in request.GET:
             submitted = True
-    return render(request, 'ajanvaraus.html', {'form':form, 'submitted':submitted, 'palvelut':dropdown_palaute})
+    return render(request, 'ajanvaraus.html', {'form':form, 'submitted':submitted})

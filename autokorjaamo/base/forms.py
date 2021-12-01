@@ -19,10 +19,17 @@ class PalauteLomake(forms.ModelForm):
         }
 
 
+class PalveluValinta(forms.Select):
+    def create_valinta(self, name, value, label, selected, index, subindex=None, attrs=None):
+        valinta = super().valinta(name, value, label, selected, index, subindex, attrs)
+        if value:
+            valinta['attrs']['hinta'] = value.instance.hinta
+        return valinta
+
 class ajanvaraus(forms.ModelForm):
     class Meta:
         model = ajanvaraus
-        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo',)
+        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo', 'valinta_palvelut',)
         labels = {
             'nimi': '',
             'sposti': '',
@@ -51,4 +58,5 @@ class ajanvaraus(forms.ModelForm):
             'lisatiedot': forms.Textarea(attrs={'placeholder': 'Lisätiedot...', 'class': 'av-lisatiedot'}),
             'pvm': forms.DateInput(attrs={'placeholder': 'Päivämäärä...', 'class': 'av-pvm', 'type':'date'}),
             'klo': forms.TimeInput(attrs={'placeholder': 'Kellonaika...', 'class': 'av-klo', 'type':'time'}),
+            'valinta_palvelut': PalveluValinta
         }
