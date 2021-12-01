@@ -20,10 +20,9 @@ class PalauteLomake(forms.ModelForm):
 
 
 class PalveluValinta(forms.Select):
-    def create_valinta(self, name, value, label, selected, index, subindex=None, attrs=None):
-        valinta = super().valinta(name, value, label, selected, index, subindex, attrs)
-        if value:
-            valinta['attrs']['hinta'] = value.instance.hinta
+    def create_option(self, name, value, label, selected, index, subindex=None, attrs=None):
+        valinta = super().create_option(name, value, label, selected, index, subindex, attrs)
+
         return valinta
 
 class ajanvaraus(forms.ModelForm):
