@@ -60,15 +60,16 @@
     <p>Ensisijainen toivottu huoltoaika</p>
         {{ form.pvm }}
         {{ form.klo }}
-    
+        {{ form.valinta_palvelut }}
 
-<!-- Yritin vaan jotain, tohon alapuolelle pitäs tehä se dropdown lista -->
+<!-- Yritin vaan jotain, tohon alapuolelle pitäs tehä se dropdown lista
     <select name="palvelu" id="palvelu" class="av-form-elem">
         <option value="a">Valitse palvelu</option>
         {% for palvelu in palvelut %}          
         <option value="b">{{palvelu.palvelu}}</option>
         {% endfor %}
     </select>
+-->
     </div>
 
     <input type="submit" value="Varaa aika" class="palaute_painike">

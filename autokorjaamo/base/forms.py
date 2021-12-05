@@ -18,11 +18,16 @@ class PalauteLomake(forms.ModelForm):
             'sposti': forms.EmailInput(attrs={'class': 'av-sposti av-form-elem'})
         }
 
+class PalveluValinta(forms.Select):
+    def create_option(self, name, value, label, selected, index, subindex=None, attrs=None):
+        valinta = super().create_option(name, value, label, selected, index, subindex, attrs)
+
+        return valinta
 
 class ajanvaraus(forms.ModelForm):
     class Meta:
         model = ajanvaraus
-        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo',)
+        fields = ('nimi', 'sposti', 'puh', 'osoite', 'rekisterinumero', 'vuosimalli', 'merkki', 'malli', 'kilometrit', 'lisatiedot', 'pvm', 'klo', 'valinta_palvelut',)
         labels = {
             'nimi': '',
             'sposti': '',
@@ -51,4 +56,5 @@ class ajanvaraus(forms.ModelForm):
             'lisatiedot': forms.Textarea(attrs={'class': 'av-form-elem av-lisatiedot'}),
             'pvm': forms.DateInput(attrs={'class': 'av-pvm av-form-elem', 'type':'date'}),
             'klo': forms.TimeInput(attrs={'class': 'av-klo av-form-elem', 'type':'time', "min":"10:00", "max":"17:00"}),
+            'valinta_palvelut': PalveluValinta
         }
